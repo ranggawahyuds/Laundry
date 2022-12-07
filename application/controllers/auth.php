@@ -5,6 +5,9 @@ class auth extends CI_Controller
 {
     public function index()
     {
+        if ($this->session->userdata('email')) {
+            redirect('user');
+        }
         $this->form_validation->set_rules('email', 'Alamat Email', 'required|trim|valid_email', [
             'required' => 'Email Harus diisi!!!',
             'valid_email' => 'Email Tidak Benar'
@@ -40,7 +43,7 @@ class auth extends CI_Controller
                     $this->session->set_userdata($data);
 
                     if ($user['role_id'] == 1) {
-                        redirect('admin');
+                        redirect('dashboard');
                     } else {
                         if ($user['image'] == 'default.jpg') {
                             $this->session->set_flashdata('message', 
