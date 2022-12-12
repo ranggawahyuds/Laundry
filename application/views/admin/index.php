@@ -62,7 +62,8 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-md font-weight-bold text-gray-800 text-uppercase mb-1">Order Selesai</div>
-                            <div class="h1 mb-0 font-weight-bold text-gray-800">0
+                            <div class="h1 mb-0 font-weight-bold text-gray-800">
+                            <?= $this->ModelOrder->getOrderWhere(['status_order' => 'selesai'])->num_rows(); ?>
                             </div>
                         </div>
                         <div class="col-auto">

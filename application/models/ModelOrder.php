@@ -31,13 +31,8 @@ class ModelOrder extends CI_Model
         $this->db->from('order');
         return $this->db->get()->row($field);
     }
-
-    public function getKategori()
+    public function getOrderWhere($where = null)
     {
-        return $this->db->get('kategori');
-    }
-    public function getProses()
-    {
-        return $this->db->get('proses');
+        return $this->db->get_where('order', $where);
     }
 }  
