@@ -12,7 +12,7 @@
                                 <?= $this->ModelUser->getUserWhere(['role_id' => 2])->num_rows(); ?></div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-user-tie fa-3x text-gray-600"></i></a>
+                            <i class="fas fa-user-tie fa-3x text-gray-600"></i>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                             </div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-users fa-3x text-gray-600"></i></a>
+                            <i class="fas fa-users fa-3x text-gray-600"></i>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <div class="col-auto">
-                           <i class="fas fa-clipboard fa-3x text-gray-600"></i></a>
+                           <i class="fas fa-clipboard fa-3x text-gray-600"></i>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                             </div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-shopping-cart fa-3x text-gray-600"></i></a>
+                            <i class="fas fa-shopping-cart fa-3x text-gray-600"></i>
                         </div>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
                                 <td><?= $b['jenis']; ?></td>
                                 <td><?= $b['tgl_order']; ?></td>
                                 <td><?= $b['tgl_selesai']; ?></td>
-                                <td><?= $b['status_order']; ?></td>
+                                <td><div style="text-transform: uppercase"><?= $b['status_order']; ?></td>
                             </tr>
                         <?php } ?>
                     </tbody>

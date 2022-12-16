@@ -25,7 +25,7 @@ class dashboard extends CI_Controller {
     public function member()
     {
         $data ['title1'] = 'SL - ADMIN';
-        $data['title'] = 'Dasboard';
+        $data['title'] = 'Data Member';
         $data['user'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
         $this->db->where('role_id', 2);
         $data['member'] = $this->db->get('user')->result_array();

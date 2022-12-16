@@ -30,8 +30,10 @@
                         placeholder="Masukkan Total Order" value="<?= $b['total_order']; ?>">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-user" id="status_order" name="status_order" 
-                        placeholder="Masukkan Status Order" value="<?= $b['status_order']; ?>">
+                        <select class="form-control form-control-user" name="status_order" id="status_order">
+                            <option value="selesai">Selesai</option>
+                            <option value="proses">Proses</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <input type="button" class="form-control form-control-user btn btn-dark col-lg-3 mt-3" 
