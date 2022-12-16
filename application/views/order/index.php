@@ -95,7 +95,9 @@
                             <input type ="date" name="tgl_selesai" id="tgl_selesai" class="form-control">
                     </div>
                     <div class="form-group">
-                        <select class="form-control form-control-user" name="status_order" id="status_order" disabled>
+                        <select class="form-control form-control-user" name="status_order" id="status_order">
+                            <option value="">--->Status Order<---</option>
+                            <option value="selesai">Selesai</option>
                             <option value="proses">Proses</option>
                         </select>
                     </div>
