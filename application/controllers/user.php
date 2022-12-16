@@ -19,4 +19,10 @@ class user extends CI_Controller {
         $this->load->view('user/index', $data);
         $this->load->view('templates/footer');
     }
+    public function hapusUser()
+    {
+        $where = ['id' => $this->uri->segment(3)];
+        $this->ModelUser->hapusUser($where);
+        redirect('dashboard/member');
+    }
 }

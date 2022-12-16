@@ -37,12 +37,9 @@
                                     <img src="<?= base_url('assets/img/profile/') . $a['image']; ?>" class="img-fluid img-thumbnail" alt="..." style="width:40px;height:35px;">
                                 </picture>
                             </td>
-                            <!--<td>
-                                        <a href="<?
-                                                    ?>" class="badge badge-info"><i class="fas fa-edit"></i> Ubah</a>
-                                        <a href="<?
-                                                    ?>" onclick="return confirm('Kamu yakin akan menghapus <?= $judul . ' ' . $b['judul_buku']; ?> ?');" class="badge badge-danger"><i class="fas fa-trash"></i> Hapus</a>
-                                    </td> -->
+                            <td>
+                                <a href="<?= base_url('user/hapusUser/').$a['id'];?>" onclick="return confirm('Kamu yakin akan menghapus ?');" class="badge badge-danger"><i class="fas fa-trash"></i> Hapus</a>
+                            </td>
                         </tr>
                     <?php } ?>
                 </tbody>

@@ -9,7 +9,7 @@
                         <div class="col mr-2">
                             <div class="text-md font-weight-bold text-gray-800 text-uppercase mb-1">Admin</div>
                             <div class="h1 mb-0 font-weight-bold text-gray-800">
-                                <?= $this->ModelUser->getUserWhere(['role_id' => 2])->num_rows(); ?></div>
+                                <?= $this->ModelUser->getUserWhere(['role_id' => 1])->num_rows(); ?></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-user-tie fa-3x text-gray-600"></i>
@@ -27,7 +27,7 @@
                             <div class="text-md font-weight-bold text-gray-800 text-uppercase mb-1">
                                 Member</div>
                             <div class="h1 mb-0 font-weight-bold text-gray-800">
-                                <?= $this->ModelUser->getUserWhere(['role_id' => 1])->num_rows(); ?>
+                                <?= $this->ModelUser->getUserWhere(['role_id' => 2])->num_rows(); ?>
                             </div>
                         </div>
                         <div class="col-auto">
