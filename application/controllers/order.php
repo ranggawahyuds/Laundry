@@ -10,11 +10,6 @@ class order extends CI_Controller
     }
     public function index()
     {
-        if ($this->session->userdata['role_id'] == '2'){
-        $this->session->set_flashdata('message', 'Tambah data hanya untuk admin!');
-        redirect('dashboard');
-        }
-
         $data['title1'] = 'SL - ADMIN';
         $data['title'] = 'Order Data';
         $data['user'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
@@ -45,6 +40,10 @@ class order extends CI_Controller
             $this->load->view('order/index', $data);
             $this->load->view('templates/footer');
         } else {
+            if ($this->session->userdata['role_id'] == '2'){
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Tambah data hanya untuk admin!</div>');
+                redirect('order');
+            }
             $data = [
                 'id_order' => $this->input->post('id_order', true),
                 'email' => $this->input->post('email', true),
@@ -89,6 +88,10 @@ class order extends CI_Controller
             $this->load->view('order/ubah_order', $data);
             $this->load->view('templates/footer');
         } else {
+            if ($this->session->userdata['role_id'] == '2'){
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Ubah data hanya untuk admin!</div>');
+                redirect('order');
+            }
             $data = [
                 'email' => $this->input->post('email', true),
                 'jenis' => $this->input->post('jenis', true),

@@ -1,7 +1,5 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
-
-    <?= $this->session->flashdata('message'); ?>
     <div class="row">
         <div class="col-lg-12">
             <?php if (validation_errors()) { ?>

@@ -67,12 +67,12 @@ class auth extends CI_Controller
     public function regis()
     {
         $this->form_validation->set_rules('name', 'Name', 'required', [
-            'required' => 'Nama Belum diis!!'
+            'required' => 'Full Name can not be empty'
         ]);
         $this->form_validation->set_rules('email', 'Alamat Email', 'required|trim|valid_email|is_unique[user.email]', [
-            'valid_email' => 'Email already registered!',
-            'required' => 'Email Belum diisi!',
-            'is_unique' => 'Email Sudah Terdaftar!'
+            'valid_email' => 'Email is not correct',
+            'required' => 'Email can not be empty',
+            'is_unique' => 'Email already registered!'
         ]);
         $this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[3]|matches[password2]', [
             'matches' => 'Password dont match!',
